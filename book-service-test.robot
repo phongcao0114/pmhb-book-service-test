@@ -1,5 +1,3 @@
-# https://github.com/asyrjasalo/RESTinstance
-
 *Settings
 # Library                   String
 # Library                   Collections

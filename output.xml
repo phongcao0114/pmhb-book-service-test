@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.0 on darwin)" generated="20201016 09:19:17.908" rpa="false">
-<suite id="s1" name="test.REST" source="/Users/phong.t/Downloads/goworkspace/src/github.com/phongcao0114/pmhb-book-service-test/test.REST.robot">
+<robot generator="Robot 3.2.2 (Python 3.9.0 on darwin)" generated="20201016 09:44:38.949" rpa="false">
+<suite id="s1" name="Book-Service-Test" source="/Users/phong.t/Downloads/goworkspace/src/github.com/phongcao0114/pmhb-book-service-test/book-service-test.robot">
 <test id="s1-t1" name="Insert Book - Missing Name">
 <kw name="Post" library="REST">
 <tags>
@@ -12,7 +12,7 @@
 <arg>${req_body_missing_name}</arg>
 <arg>headers=${header}</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.366" endtime="20201016 09:19:18.456"></status>
+<status status="PASS" starttime="20201016 09:44:39.355" endtime="20201016 09:44:39.412"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -23,7 +23,7 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.457" endtime="20201016 09:19:18.457"></status>
+<status status="PASS" starttime="20201016 09:44:39.412" endtime="20201016 09:44:39.413"></status>
 </kw>
 <kw name="Output" library="REST">
 <tags>
@@ -33,13 +33,13 @@
 <arguments>
 <arg>response body error</arg>
 </arguments>
-<msg timestamp="20201016 09:19:18.458" level="INFO">
+<msg timestamp="20201016 09:44:39.413" level="INFO">
 {
     "error_code": "1000",
     "error_desc": "Validate failed",
     "original_error_str": "name is missing"
 }</msg>
-<status status="PASS" starttime="20201016 09:19:18.457" endtime="20201016 09:19:18.484"></status>
+<status status="PASS" starttime="20201016 09:44:39.413" endtime="20201016 09:44:39.441"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -50,9 +50,9 @@
 <arg>response body error original_error_str</arg>
 <arg>${err_missing_name}</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.484" endtime="20201016 09:19:18.485"></status>
+<status status="PASS" starttime="20201016 09:44:39.441" endtime="20201016 09:44:39.442"></status>
 </kw>
-<status status="PASS" starttime="20201016 09:19:18.365" endtime="20201016 09:19:18.485" critical="yes"></status>
+<status status="PASS" starttime="20201016 09:44:39.355" endtime="20201016 09:44:39.442" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Insert Book - Missing Author">
 <kw name="Post" library="REST">
@@ -65,7 +65,7 @@
 <arg>${req_body_missing_author}</arg>
 <arg>headers=${header}</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.487" endtime="20201016 09:19:18.495"></status>
+<status status="PASS" starttime="20201016 09:44:39.443" endtime="20201016 09:44:39.448"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -76,7 +76,7 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.495" endtime="20201016 09:19:18.496"></status>
+<status status="PASS" starttime="20201016 09:44:39.448" endtime="20201016 09:44:39.448"></status>
 </kw>
 <kw name="Output" library="REST">
 <tags>
@@ -86,13 +86,13 @@
 <arguments>
 <arg>response body error</arg>
 </arguments>
-<msg timestamp="20201016 09:19:18.496" level="INFO">
+<msg timestamp="20201016 09:44:39.449" level="INFO">
 {
     "error_code": "1000",
     "error_desc": "Validate failed",
     "original_error_str": "author is missing"
 }</msg>
-<status status="PASS" starttime="20201016 09:19:18.496" endtime="20201016 09:19:18.497"></status>
+<status status="PASS" starttime="20201016 09:44:39.448" endtime="20201016 09:44:39.449"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -103,9 +103,9 @@
 <arg>response body error original_error_str</arg>
 <arg>${err_missing_author}</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.497" endtime="20201016 09:19:18.498"></status>
+<status status="PASS" starttime="20201016 09:44:39.449" endtime="20201016 09:44:39.450"></status>
 </kw>
-<status status="PASS" starttime="20201016 09:19:18.486" endtime="20201016 09:19:18.498" critical="yes"></status>
+<status status="PASS" starttime="20201016 09:44:39.442" endtime="20201016 09:44:39.450" critical="yes"></status>
 </test>
 <test id="s1-t3" name="Insert Book - Success">
 <kw name="Post" library="REST">
@@ -118,7 +118,7 @@
 <arg>${req_body}</arg>
 <arg>headers=${header}</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.499" endtime="20201016 09:19:18.516"></status>
+<status status="PASS" starttime="20201016 09:44:39.450" endtime="20201016 09:44:39.460"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -129,7 +129,7 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.517" endtime="20201016 09:19:18.517"></status>
+<status status="PASS" starttime="20201016 09:44:39.460" endtime="20201016 09:44:39.460"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -142,18 +142,18 @@
 <assign>
 <var>${id}</var>
 </assign>
-<msg timestamp="20201016 09:19:18.519" level="INFO">${id} = ['163d4c80-791a-4e81-a9d9-a3a780054a7b']</msg>
-<status status="PASS" starttime="20201016 09:19:18.518" endtime="20201016 09:19:18.519"></status>
+<msg timestamp="20201016 09:44:39.461" level="INFO">${id} = ['daca4086-be2c-43b1-9d8f-78415fb6d392']</msg>
+<status status="PASS" starttime="20201016 09:44:39.461" endtime="20201016 09:44:39.461"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${id}</arg>
 </arguments>
-<msg timestamp="20201016 09:19:18.520" level="INFO">${id} = ['163d4c80-791a-4e81-a9d9-a3a780054a7b']</msg>
-<status status="PASS" starttime="20201016 09:19:18.519" endtime="20201016 09:19:18.520"></status>
+<msg timestamp="20201016 09:44:39.462" level="INFO">${id} = ['daca4086-be2c-43b1-9d8f-78415fb6d392']</msg>
+<status status="PASS" starttime="20201016 09:44:39.461" endtime="20201016 09:44:39.462"></status>
 </kw>
-<status status="PASS" starttime="20201016 09:19:18.499" endtime="20201016 09:19:18.521" critical="yes"></status>
+<status status="PASS" starttime="20201016 09:44:39.450" endtime="20201016 09:44:39.462" critical="yes"></status>
 </test>
 <test id="s1-t4" name="Get Book - Success">
 <kw name="Get" library="REST">
@@ -165,7 +165,7 @@
 <arg>/kph/api/book/${id}[0]</arg>
 <arg>headers=${header}</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.522" endtime="20201016 09:19:18.540"></status>
+<status status="PASS" starttime="20201016 09:44:39.463" endtime="20201016 09:44:39.475"></status>
 </kw>
 <kw name="Output" library="REST">
 <tags>
@@ -175,22 +175,22 @@
 <arguments>
 <arg>response</arg>
 </arguments>
-<msg timestamp="20201016 09:19:18.541" level="INFO">
+<msg timestamp="20201016 09:44:39.477" level="INFO">
 {
-    "seconds": 0.014148999999999998,
+    "seconds": 0.008997999999999999,
     "status": 200,
     "body": {
-        "id": "163d4c80-791a-4e81-a9d9-a3a780054a7b",
+        "id": "daca4086-be2c-43b1-9d8f-78415fb6d392",
         "name": "SampleBook",
         "author": "Nick"
     },
     "headers": {
         "Content-Type": "application/json",
-        "Date": "Fri, 16 Oct 2020 02:19:18 GMT",
+        "Date": "Fri, 16 Oct 2020 02:44:39 GMT",
         "Content-Length": "82"
     }
 }</msg>
-<status status="PASS" starttime="20201016 09:19:18.541" endtime="20201016 09:19:18.542"></status>
+<status status="PASS" starttime="20201016 09:44:39.476" endtime="20201016 09:44:39.478"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -201,7 +201,7 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.542" endtime="20201016 09:19:18.543"></status>
+<status status="PASS" starttime="20201016 09:44:39.478" endtime="20201016 09:44:39.480"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -212,7 +212,7 @@
 <arg>response body name</arg>
 <arg>${book_name}</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.543" endtime="20201016 09:19:18.544"></status>
+<status status="PASS" starttime="20201016 09:44:39.481" endtime="20201016 09:44:39.482"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -223,9 +223,9 @@
 <arg>response body author</arg>
 <arg>${author}</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.545" endtime="20201016 09:19:18.545"></status>
+<status status="PASS" starttime="20201016 09:44:39.483" endtime="20201016 09:44:39.485"></status>
 </kw>
-<status status="PASS" starttime="20201016 09:19:18.521" endtime="20201016 09:19:18.546" critical="yes"></status>
+<status status="PASS" starttime="20201016 09:44:39.462" endtime="20201016 09:44:39.485" critical="yes"></status>
 </test>
 <test id="s1-t5" name="Delete Book - Success">
 <kw name="Delete" library="REST">
@@ -237,7 +237,7 @@
 <arg>/kph/api/book/${id}[0]</arg>
 <arg>headers=${header}</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.549" endtime="20201016 09:19:18.572"></status>
+<status status="PASS" starttime="20201016 09:44:39.487" endtime="20201016 09:44:39.502"></status>
 </kw>
 <kw name="Output" library="REST">
 <tags>
@@ -247,18 +247,18 @@
 <arguments>
 <arg>response</arg>
 </arguments>
-<msg timestamp="20201016 09:19:18.574" level="INFO">
+<msg timestamp="20201016 09:44:39.503" level="INFO">
 {
-    "seconds": 0.01852,
+    "seconds": 0.010527,
     "status": 200,
     "body": true,
     "headers": {
         "Content-Type": "application/json",
-        "Date": "Fri, 16 Oct 2020 02:19:18 GMT",
+        "Date": "Fri, 16 Oct 2020 02:44:39 GMT",
         "Content-Length": "5"
     }
 }</msg>
-<status status="PASS" starttime="20201016 09:19:18.573" endtime="20201016 09:19:18.574"></status>
+<status status="PASS" starttime="20201016 09:44:39.502" endtime="20201016 09:44:39.503"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -269,11 +269,11 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20201016 09:19:18.575" endtime="20201016 09:19:18.576"></status>
+<status status="PASS" starttime="20201016 09:44:39.503" endtime="20201016 09:44:39.504"></status>
 </kw>
-<status status="PASS" starttime="20201016 09:19:18.547" endtime="20201016 09:19:18.576" critical="yes"></status>
+<status status="PASS" starttime="20201016 09:44:39.486" endtime="20201016 09:44:39.505" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20201016 09:19:17.910" endtime="20201016 09:19:18.577"></status>
+<status status="PASS" starttime="20201016 09:44:38.951" endtime="20201016 09:44:39.506"></status>
 </suite>
 <statistics>
 <total>
@@ -283,7 +283,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="0" id="s1" name="test.REST">test.REST</stat>
+<stat pass="5" fail="0" id="s1" name="Book-Service-Test">Book-Service-Test</stat>
 </suite>
 </statistics>
 <errors>
