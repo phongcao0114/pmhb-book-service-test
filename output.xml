@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on darwin)" generated="20201016 09:19:17.908" rpa="false">
+<suite id="s1" name="test.REST" source="/Users/phong.t/Downloads/goworkspace/src/github.com/phongcao0114/pmhb-book-service-test/test.REST.robot">
+<test id="s1-t1" name="Insert Book - Missing Name">
+<kw name="Post" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a POST request to the endpoint.*</doc>
+<arguments>
+<arg>/kph/api/book</arg>
+<arg>${req_body_missing_name}</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.366" endtime="20201016 09:19:18.456"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.457" endtime="20201016 09:19:18.457"></status>
+</kw>
+<kw name="Output" library="REST">
+<tags>
+<tag>I/O</tag>
+</tags>
+<doc>*Outputs JSON to terminal or a file.*</doc>
+<arguments>
+<arg>response body error</arg>
+</arguments>
+<msg timestamp="20201016 09:19:18.458" level="INFO">
+{
+    "error_code": "1000",
+    "error_desc": "Validate failed",
+    "original_error_str": "name is missing"
+}</msg>
+<status status="PASS" starttime="20201016 09:19:18.457" endtime="20201016 09:19:18.484"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body error original_error_str</arg>
+<arg>${err_missing_name}</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.484" endtime="20201016 09:19:18.485"></status>
+</kw>
+<status status="PASS" starttime="20201016 09:19:18.365" endtime="20201016 09:19:18.485" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Insert Book - Missing Author">
+<kw name="Post" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a POST request to the endpoint.*</doc>
+<arguments>
+<arg>/kph/api/book</arg>
+<arg>${req_body_missing_author}</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.487" endtime="20201016 09:19:18.495"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.495" endtime="20201016 09:19:18.496"></status>
+</kw>
+<kw name="Output" library="REST">
+<tags>
+<tag>I/O</tag>
+</tags>
+<doc>*Outputs JSON to terminal or a file.*</doc>
+<arguments>
+<arg>response body error</arg>
+</arguments>
+<msg timestamp="20201016 09:19:18.496" level="INFO">
+{
+    "error_code": "1000",
+    "error_desc": "Validate failed",
+    "original_error_str": "author is missing"
+}</msg>
+<status status="PASS" starttime="20201016 09:19:18.496" endtime="20201016 09:19:18.497"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body error original_error_str</arg>
+<arg>${err_missing_author}</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.497" endtime="20201016 09:19:18.498"></status>
+</kw>
+<status status="PASS" starttime="20201016 09:19:18.486" endtime="20201016 09:19:18.498" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Insert Book - Success">
+<kw name="Post" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a POST request to the endpoint.*</doc>
+<arguments>
+<arg>/kph/api/book</arg>
+<arg>${req_body}</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.499" endtime="20201016 09:19:18.516"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.517" endtime="20201016 09:19:18.517"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body</arg>
+</arguments>
+<assign>
+<var>${id}</var>
+</assign>
+<msg timestamp="20201016 09:19:18.519" level="INFO">${id} = ['163d4c80-791a-4e81-a9d9-a3a780054a7b']</msg>
+<status status="PASS" starttime="20201016 09:19:18.518" endtime="20201016 09:19:18.519"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${id}</arg>
+</arguments>
+<msg timestamp="20201016 09:19:18.520" level="INFO">${id} = ['163d4c80-791a-4e81-a9d9-a3a780054a7b']</msg>
+<status status="PASS" starttime="20201016 09:19:18.519" endtime="20201016 09:19:18.520"></status>
+</kw>
+<status status="PASS" starttime="20201016 09:19:18.499" endtime="20201016 09:19:18.521" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Get Book - Success">
+<kw name="Get" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a GET request to the endpoint.*</doc>
+<arguments>
+<arg>/kph/api/book/${id}[0]</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.522" endtime="20201016 09:19:18.540"></status>
+</kw>
+<kw name="Output" library="REST">
+<tags>
+<tag>I/O</tag>
+</tags>
+<doc>*Outputs JSON to terminal or a file.*</doc>
+<arguments>
+<arg>response</arg>
+</arguments>
+<msg timestamp="20201016 09:19:18.541" level="INFO">
+{
+    "seconds": 0.014148999999999998,
+    "status": 200,
+    "body": {
+        "id": "163d4c80-791a-4e81-a9d9-a3a780054a7b",
+        "name": "SampleBook",
+        "author": "Nick"
+    },
+    "headers": {
+        "Content-Type": "application/json",
+        "Date": "Fri, 16 Oct 2020 02:19:18 GMT",
+        "Content-Length": "82"
+    }
+}</msg>
+<status status="PASS" starttime="20201016 09:19:18.541" endtime="20201016 09:19:18.542"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.542" endtime="20201016 09:19:18.543"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body name</arg>
+<arg>${book_name}</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.543" endtime="20201016 09:19:18.544"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body author</arg>
+<arg>${author}</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.545" endtime="20201016 09:19:18.545"></status>
+</kw>
+<status status="PASS" starttime="20201016 09:19:18.521" endtime="20201016 09:19:18.546" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Delete Book - Success">
+<kw name="Delete" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a DELETE request to the endpoint.*</doc>
+<arguments>
+<arg>/kph/api/book/${id}[0]</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.549" endtime="20201016 09:19:18.572"></status>
+</kw>
+<kw name="Output" library="REST">
+<tags>
+<tag>I/O</tag>
+</tags>
+<doc>*Outputs JSON to terminal or a file.*</doc>
+<arguments>
+<arg>response</arg>
+</arguments>
+<msg timestamp="20201016 09:19:18.574" level="INFO">
+{
+    "seconds": 0.01852,
+    "status": 200,
+    "body": true,
+    "headers": {
+        "Content-Type": "application/json",
+        "Date": "Fri, 16 Oct 2020 02:19:18 GMT",
+        "Content-Length": "5"
+    }
+}</msg>
+<status status="PASS" starttime="20201016 09:19:18.573" endtime="20201016 09:19:18.574"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20201016 09:19:18.575" endtime="20201016 09:19:18.576"></status>
+</kw>
+<status status="PASS" starttime="20201016 09:19:18.547" endtime="20201016 09:19:18.576" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201016 09:19:17.910" endtime="20201016 09:19:18.577"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0">Critical Tests</stat>
+<stat pass="5" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" id="s1" name="test.REST">test.REST</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
