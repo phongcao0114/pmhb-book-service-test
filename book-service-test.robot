@@ -23,7 +23,7 @@ Insert Book - Missing Author
 Insert Book - Success
     POST                    /kph/api/book                               ${req_body}                                 headers=${header}       
     Integer                 response status                             200
-    ${id}=                  String                                      response body                                                       # Create a varibale names 'id' contains the value which retuned from "Create Book' api
+    ${id}=                  String                                      response body                                                       # Create a varibale names 'id' contains the value which retuned from "Insert Book' api
     Set Global Variable     ${id}                                                                                                           # Set variable 'id' global to re-use in other test cases
 
 Get Book - Success
