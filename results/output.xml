@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.0 on darwin)" generated="20201019 11:33:26.753" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.9.0 on darwin)" generated="20201021 11:23:55.824" rpa="false">
 <suite id="s1" name="Book-Service-Test" source="/Users/phong.t/Downloads/goworkspace/src/github.com/phongcao0114/pmhb-book-service-test/book-service-test.robot">
 <test id="s1-t1" name="Insert Book - Missing Name">
 <kw name="Post" library="REST">
@@ -12,7 +12,7 @@
 <arg>${req_body_missing_name}</arg>
 <arg>headers=${header}</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:26.995" endtime="20201019 11:33:27.059"></status>
+<status status="PASS" starttime="20201021 11:23:56.210" endtime="20201021 11:23:56.273"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -23,7 +23,7 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.060" endtime="20201019 11:33:27.060"></status>
+<status status="PASS" starttime="20201021 11:23:56.273" endtime="20201021 11:23:56.274"></status>
 </kw>
 <kw name="Output" library="REST">
 <tags>
@@ -33,13 +33,13 @@
 <arguments>
 <arg>response body error</arg>
 </arguments>
-<msg timestamp="20201019 11:33:27.061" level="INFO">
+<msg timestamp="20201021 11:23:56.274" level="INFO">
 {
     "error_code": "1000",
     "error_desc": "Validate failed",
     "original_error_str": "name is missing"
 }</msg>
-<status status="PASS" starttime="20201019 11:33:27.061" endtime="20201019 11:33:27.080"></status>
+<status status="PASS" starttime="20201021 11:23:56.274" endtime="20201021 11:23:56.296"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -50,9 +50,9 @@
 <arg>response body error original_error_str</arg>
 <arg>${err_missing_name}</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.080" endtime="20201019 11:33:27.081"></status>
+<status status="PASS" starttime="20201021 11:23:56.296" endtime="20201021 11:23:56.296"></status>
 </kw>
-<status status="PASS" starttime="20201019 11:33:26.995" endtime="20201019 11:33:27.081" critical="yes"></status>
+<status status="PASS" starttime="20201021 11:23:56.209" endtime="20201021 11:23:56.297" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Insert Book - Missing Author">
 <kw name="Post" library="REST">
@@ -65,7 +65,7 @@
 <arg>${req_body_missing_author}</arg>
 <arg>headers=${header}</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.082" endtime="20201019 11:33:27.086"></status>
+<status status="PASS" starttime="20201021 11:23:56.297" endtime="20201021 11:23:56.301"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -76,7 +76,7 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.086" endtime="20201019 11:33:27.087"></status>
+<status status="PASS" starttime="20201021 11:23:56.301" endtime="20201021 11:23:56.302"></status>
 </kw>
 <kw name="Output" library="REST">
 <tags>
@@ -86,13 +86,13 @@
 <arguments>
 <arg>response body error</arg>
 </arguments>
-<msg timestamp="20201019 11:33:27.087" level="INFO">
+<msg timestamp="20201021 11:23:56.303" level="INFO">
 {
     "error_code": "1000",
     "error_desc": "Validate failed",
     "original_error_str": "author is missing"
 }</msg>
-<status status="PASS" starttime="20201019 11:33:27.087" endtime="20201019 11:33:27.087"></status>
+<status status="PASS" starttime="20201021 11:23:56.302" endtime="20201021 11:23:56.303"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -103,9 +103,9 @@
 <arg>response body error original_error_str</arg>
 <arg>${err_missing_author}</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.087" endtime="20201019 11:33:27.088"></status>
+<status status="PASS" starttime="20201021 11:23:56.303" endtime="20201021 11:23:56.304"></status>
 </kw>
-<status status="PASS" starttime="20201019 11:33:27.081" endtime="20201019 11:33:27.088" critical="yes"></status>
+<status status="PASS" starttime="20201021 11:23:56.297" endtime="20201021 11:23:56.304" critical="yes"></status>
 </test>
 <test id="s1-t3" name="Insert Book - Success">
 <kw name="Post" library="REST">
@@ -118,7 +118,7 @@
 <arg>${req_body}</arg>
 <arg>headers=${header}</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.089" endtime="20201019 11:33:27.098"></status>
+<status status="PASS" starttime="20201021 11:23:56.305" endtime="20201021 11:23:56.309"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -129,7 +129,7 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.098" endtime="20201019 11:33:27.099"></status>
+<status status="PASS" starttime="20201021 11:23:56.309" endtime="20201021 11:23:56.310"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -142,55 +142,30 @@
 <assign>
 <var>${id}</var>
 </assign>
-<msg timestamp="20201019 11:33:27.099" level="INFO">${id} = ['ed512239-7656-4766-abbc-31105278d01b']</msg>
-<status status="PASS" starttime="20201019 11:33:27.099" endtime="20201019 11:33:27.099"></status>
+<msg timestamp="20201021 11:23:56.310" level="INFO">${id} = ['8100f937-008a-45f8-b656-0227551a8df6']</msg>
+<status status="PASS" starttime="20201021 11:23:56.310" endtime="20201021 11:23:56.310"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${id}</arg>
 </arguments>
-<msg timestamp="20201019 11:33:27.100" level="INFO">${id} = ['ed512239-7656-4766-abbc-31105278d01b']</msg>
-<status status="PASS" starttime="20201019 11:33:27.100" endtime="20201019 11:33:27.100"></status>
+<msg timestamp="20201021 11:23:56.311" level="INFO">${id} = ['8100f937-008a-45f8-b656-0227551a8df6']</msg>
+<status status="PASS" starttime="20201021 11:23:56.311" endtime="20201021 11:23:56.311"></status>
 </kw>
-<status status="PASS" starttime="20201019 11:33:27.088" endtime="20201019 11:33:27.100" critical="yes"></status>
+<status status="PASS" starttime="20201021 11:23:56.304" endtime="20201021 11:23:56.311" critical="yes"></status>
 </test>
-<test id="s1-t4" name="Get Book - Success">
+<test id="s1-t4" name="Get Book List">
 <kw name="Get" library="REST">
 <tags>
 <tag>http</tag>
 </tags>
 <doc>*Sends a GET request to the endpoint.*</doc>
 <arguments>
-<arg>/kph/api/book/${id}[0]</arg>
+<arg>/kph/api/book</arg>
 <arg>headers=${header}</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.101" endtime="20201019 11:33:27.109"></status>
-</kw>
-<kw name="Output" library="REST">
-<tags>
-<tag>I/O</tag>
-</tags>
-<doc>*Outputs JSON to terminal or a file.*</doc>
-<arguments>
-<arg>response</arg>
-</arguments>
-<msg timestamp="20201019 11:33:27.109" level="INFO">
-{
-    "seconds": 0.005878,
-    "status": 200,
-    "body": {
-        "id": "ed512239-7656-4766-abbc-31105278d01b",
-        "name": "SampleBook",
-        "author": "Nick"
-    },
-    "headers": {
-        "Content-Type": "application/json",
-        "Date": "Mon, 19 Oct 2020 04:33:27 GMT",
-        "Content-Length": "82"
-    }
-}</msg>
-<status status="PASS" starttime="20201019 11:33:27.109" endtime="20201019 11:33:27.110"></status>
+<status status="PASS" starttime="20201021 11:23:56.312" endtime="20201021 11:23:56.320"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -201,7 +176,65 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.110" endtime="20201019 11:33:27.111"></status>
+<status status="PASS" starttime="20201021 11:23:56.321" endtime="20201021 11:23:56.321"></status>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<doc>Verifies that the given item is not empty.</doc>
+<arguments>
+<arg>response body</arg>
+</arguments>
+<msg timestamp="20201021 11:23:56.322" level="INFO">Length is 13</msg>
+<status status="PASS" starttime="20201021 11:23:56.322" endtime="20201021 11:23:56.322"></status>
+</kw>
+<status status="PASS" starttime="20201021 11:23:56.312" endtime="20201021 11:23:56.322" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Get Book - Success">
+<kw name="Get" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a GET request to the endpoint.*</doc>
+<arguments>
+<arg>/kph/api/book/${id}[0]</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<status status="PASS" starttime="20201021 11:23:56.323" endtime="20201021 11:23:56.327"></status>
+</kw>
+<kw name="Output" library="REST">
+<tags>
+<tag>I/O</tag>
+</tags>
+<doc>*Outputs JSON to terminal or a file.*</doc>
+<arguments>
+<arg>response</arg>
+</arguments>
+<msg timestamp="20201021 11:23:56.327" level="INFO">
+{
+    "seconds": 0.001592,
+    "status": 200,
+    "body": {
+        "id": "8100f937-008a-45f8-b656-0227551a8df6",
+        "name": "SampleBook",
+        "author": "Nick"
+    },
+    "headers": {
+        "Content-Type": "application/json",
+        "Date": "Wed, 21 Oct 2020 04:23:56 GMT",
+        "Content-Length": "82"
+    }
+}</msg>
+<status status="PASS" starttime="20201021 11:23:56.327" endtime="20201021 11:23:56.328"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20201021 11:23:56.328" endtime="20201021 11:23:56.328"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -212,7 +245,7 @@
 <arg>response body name</arg>
 <arg>${book_name}</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.111" endtime="20201019 11:33:27.112"></status>
+<status status="PASS" starttime="20201021 11:23:56.329" endtime="20201021 11:23:56.329"></status>
 </kw>
 <kw name="String" library="REST">
 <tags>
@@ -223,21 +256,22 @@
 <arg>response body author</arg>
 <arg>${author}</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.112" endtime="20201019 11:33:27.113"></status>
+<status status="PASS" starttime="20201021 11:23:56.329" endtime="20201021 11:23:56.330"></status>
 </kw>
-<status status="PASS" starttime="20201019 11:33:27.100" endtime="20201019 11:33:27.113" critical="yes"></status>
+<status status="PASS" starttime="20201021 11:23:56.322" endtime="20201021 11:23:56.330" critical="yes"></status>
 </test>
-<test id="s1-t5" name="Delete Book - Success">
-<kw name="Delete" library="REST">
+<test id="s1-t6" name="Update Book - Update Name">
+<kw name="Put" library="REST">
 <tags>
 <tag>http</tag>
 </tags>
-<doc>*Sends a DELETE request to the endpoint.*</doc>
+<doc>*Sends a PUT request to the endpoint.*</doc>
 <arguments>
 <arg>/kph/api/book/${id}[0]</arg>
+<arg>${req_body_update_name}</arg>
 <arg>headers=${header}</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.114" endtime="20201019 11:33:27.129"></status>
+<status status="PASS" starttime="20201021 11:23:56.331" endtime="20201021 11:23:56.337"></status>
 </kw>
 <kw name="Output" library="REST">
 <tags>
@@ -247,18 +281,18 @@
 <arguments>
 <arg>response</arg>
 </arguments>
-<msg timestamp="20201019 11:33:27.131" level="INFO">
+<msg timestamp="20201021 11:23:56.337" level="INFO">
 {
-    "seconds": 0.011593,
+    "seconds": 0.0029649999999999998,
     "status": 200,
     "body": true,
     "headers": {
         "Content-Type": "application/json",
-        "Date": "Mon, 19 Oct 2020 04:33:27 GMT",
+        "Date": "Wed, 21 Oct 2020 04:23:56 GMT",
         "Content-Length": "5"
     }
 }</msg>
-<status status="PASS" starttime="20201019 11:33:27.130" endtime="20201019 11:33:27.131"></status>
+<status status="PASS" starttime="20201021 11:23:56.337" endtime="20201021 11:23:56.338"></status>
 </kw>
 <kw name="Integer" library="REST">
 <tags>
@@ -269,21 +303,169 @@
 <arg>response status</arg>
 <arg>200</arg>
 </arguments>
-<status status="PASS" starttime="20201019 11:33:27.132" endtime="20201019 11:33:27.132"></status>
+<status status="PASS" starttime="20201021 11:23:56.338" endtime="20201021 11:23:56.338"></status>
 </kw>
-<status status="PASS" starttime="20201019 11:33:27.113" endtime="20201019 11:33:27.132" critical="yes"></status>
+<kw name="Get" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a GET request to the endpoint.*</doc>
+<arguments>
+<arg>/kph/api/book/${id}[0]</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<status status="PASS" starttime="20201021 11:23:56.339" endtime="20201021 11:23:56.346"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body name</arg>
+<arg>${new_book_name}</arg>
+</arguments>
+<status status="PASS" starttime="20201021 11:23:56.346" endtime="20201021 11:23:56.347"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body author</arg>
+<arg>${author}</arg>
+</arguments>
+<status status="PASS" starttime="20201021 11:23:56.347" endtime="20201021 11:23:56.347"></status>
+</kw>
+<status status="PASS" starttime="20201021 11:23:56.330" endtime="20201021 11:23:56.347" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20201019 11:33:26.755" endtime="20201019 11:33:27.133"></status>
+<test id="s1-t7" name="Update Book - Update Author">
+<kw name="Put" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a PUT request to the endpoint.*</doc>
+<arguments>
+<arg>/kph/api/book/${id}[0]</arg>
+<arg>${req_body_update_author}</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<status status="PASS" starttime="20201021 11:23:56.348" endtime="20201021 11:23:56.355"></status>
+</kw>
+<kw name="Output" library="REST">
+<tags>
+<tag>I/O</tag>
+</tags>
+<doc>*Outputs JSON to terminal or a file.*</doc>
+<arguments>
+<arg>response</arg>
+</arguments>
+<msg timestamp="20201021 11:23:56.356" level="INFO">
+{
+    "seconds": 0.003746,
+    "status": 200,
+    "body": true,
+    "headers": {
+        "Content-Type": "application/json",
+        "Date": "Wed, 21 Oct 2020 04:23:56 GMT",
+        "Content-Length": "5"
+    }
+}</msg>
+<status status="PASS" starttime="20201021 11:23:56.356" endtime="20201021 11:23:56.357"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20201021 11:23:56.357" endtime="20201021 11:23:56.358"></status>
+</kw>
+<kw name="Get" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a GET request to the endpoint.*</doc>
+<arguments>
+<arg>/kph/api/book/${id}[0]</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<status status="PASS" starttime="20201021 11:23:56.358" endtime="20201021 11:23:56.363"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body author</arg>
+<arg>${new_author}</arg>
+</arguments>
+<status status="PASS" starttime="20201021 11:23:56.363" endtime="20201021 11:23:56.365"></status>
+</kw>
+<status status="PASS" starttime="20201021 11:23:56.348" endtime="20201021 11:23:56.366" critical="yes"></status>
+</test>
+<test id="s1-t8" name="Delete Book - Success">
+<kw name="Delete" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a DELETE request to the endpoint.*</doc>
+<arguments>
+<arg>/kph/api/book/${id}[0]</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<status status="PASS" starttime="20201021 11:23:56.367" endtime="20201021 11:23:56.375"></status>
+</kw>
+<kw name="Output" library="REST">
+<tags>
+<tag>I/O</tag>
+</tags>
+<doc>*Outputs JSON to terminal or a file.*</doc>
+<arguments>
+<arg>response</arg>
+</arguments>
+<msg timestamp="20201021 11:23:56.376" level="INFO">
+{
+    "seconds": 0.004368,
+    "status": 200,
+    "body": true,
+    "headers": {
+        "Content-Type": "application/json",
+        "Date": "Wed, 21 Oct 2020 04:23:56 GMT",
+        "Content-Length": "5"
+    }
+}</msg>
+<status status="PASS" starttime="20201021 11:23:56.375" endtime="20201021 11:23:56.376"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20201021 11:23:56.376" endtime="20201021 11:23:56.377"></status>
+</kw>
+<status status="PASS" starttime="20201021 11:23:56.367" endtime="20201021 11:23:56.377" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201021 11:23:55.826" endtime="20201021 11:23:56.377"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0">Critical Tests</stat>
-<stat pass="5" fail="0">All Tests</stat>
+<stat pass="8" fail="0">Critical Tests</stat>
+<stat pass="8" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="0" id="s1" name="Book-Service-Test">Book-Service-Test</stat>
+<stat pass="8" fail="0" id="s1" name="Book-Service-Test">Book-Service-Test</stat>
 </suite>
 </statistics>
 <errors>

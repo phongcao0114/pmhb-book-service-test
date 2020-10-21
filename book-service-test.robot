@@ -24,7 +24,12 @@ Insert Book - Success
     POST                    /kph/api/book                               ${req_body}                                 headers=${header}       
     Integer                 response status                             200
     ${id}=                  String                                      response body                                                       # Create a varibale names 'id' contains the value which retuned from "Insert Book' api
-    Set Global Variable     ${id}                                                                                                           # Set variable 'id' global to re-use in other test cases
+    Set Global Variable     ${id}    
+
+Get Book List
+    GET                     /kph/api/book                               headers=${header}       
+    Integer                 response status                             200
+    Should not be empty     response body                                                                                                           
 
 Get Book - Success
     GET                     /kph/api/book/${id}[0]                      headers=${header}  
@@ -32,6 +37,21 @@ Get Book - Success
     Integer                 response status                             200
     String                  response body name                          ${book_name}                                                        # Check if response book name is as same as expected book name
     String                  response body author                        ${author}                                                           # Check if response book author is as same as expected book author
+
+Update Book - Update Name
+    PUT                     /kph/api/book/${id}[0]                      ${req_body_update_name}                     headers=${header}
+    Output                  response
+    Integer                 response status                             200
+    GET                     /kph/api/book/${id}[0]                      headers=${header}
+    String                  response body name                          ${new_book_name}
+    String                  response body author                        ${author} 
+
+Update Book - Update Author
+    PUT                     /kph/api/book/${id}[0]                      ${req_body_update_author}                   headers=${header}
+    Output                  response
+    Integer                 response status                             200
+    GET                     /kph/api/book/${id}[0]                      headers=${header}
+    String                  response body author                        ${new_author} 
 
 Delete Book - Success
     DELETE                  /kph/api/book/${id}[0]                      headers=${header} 
